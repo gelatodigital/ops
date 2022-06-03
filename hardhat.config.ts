@@ -29,6 +29,7 @@ const ETHERSCAN_API = process.env.ETHERSCAN_API;
 // ETHERSCAN_AVALANCHE_API;
 // ETHERSCAN_OPTIMISM_API
 // ETHERSCAN_MOONBEAM_API
+// ETHERSCAN_CRONOS_API
 
 // ================================= CONFIG =========================================
 const config: HardhatUserConfig = {
@@ -62,6 +63,11 @@ const config: HardhatUserConfig = {
       url: "https://bsc-dataseed.binance.org/",
       chainId: 56,
       accounts: DEPLOYER_PK_MAINNET ? [DEPLOYER_PK_MAINNET] : [],
+    },
+    cronos: {
+      accounts: DEPLOYER_PK_MAINNET ? [DEPLOYER_PK_MAINNET] : [],
+      chainId: 25,
+      url: `https://evm.cronos.org`,
     },
     fantom: {
       accounts: DEPLOYER_PK_MAINNET ? [DEPLOYER_PK_MAINNET] : [],
